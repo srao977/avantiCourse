@@ -1,0 +1,25 @@
+package main
+import "fmt"
+
+func main() {
+	a := 15
+	b := 4	
+	fmt.Println("Addition:", a + b)          // Addition
+	fmt.Println("Subtraction:", a - b)	   // Subtraction
+	fmt.Println("Multiplication:", a * b)    // Multiplication
+	fmt.Println("Division:", float64(a) / float64(b))          // Division
+	fmt.Println("Modulus:", a % b)           // Modulus
+	fmt.Println("Precedence example:", a + b * 2)  // Multiplication happens first: 15 + (4 * 2) = 23
+	fmt.Println("With parentheses:", (a + b) * 2)  // Addition happens first: (15 + 4) * 2 = 38
+	// Overflow example with int8
+	var smallInt int8 = 127  // max value for int8
+	fmt.Println("Before overflow:", smallInt)
+	smallInt = smallInt + 1
+	fmt.Println("After overflow:", smallInt)  // wraps to -128
+
+	// Underflow example with int8
+	var smallInt2 int8 = -128  // min value for int8
+	fmt.Println("Before underflow:", smallInt2)
+	smallInt2 = smallInt2 - 1
+	fmt.Println("After underflow:", smallInt2)  // wraps to 127
+}

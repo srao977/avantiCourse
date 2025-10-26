@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+const Pi = 3.14
+const GRAVITY = 9.81
+
+func main() {
+	const (
+		daysOfWeek  int = 7
+		workingWeek int = 5
+	)
+    fmt.Println("Value of Pi:", Pi)
+    fmt.Println("Value of Gravity:", GRAVITY)
+    fmt.Println("Value of Days of Week:", daysOfWeek)
+    fmt.Println("Value of Working Weeks:", workingWeek)
+}

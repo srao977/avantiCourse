@@ -1,0 +1,42 @@
+package main
+
+import "fmt"
+func main() {
+	// Example of a basic for loop
+	for i := 0; i < 5; i++ {
+		println(i)
+	}
+	// Example of a for loop with a condition
+	for i := range 5 {
+		if i%2 == 0 {
+			println(i, "is even")
+		} else {
+			println(i, "is odd")
+		}
+	}
+	// Example of an infinite loop with a break condition
+	i := 0
+	for {
+		if i >= 5 {
+			break
+		}
+		println(i)
+		i++
+	}
+	// Example of a for range loop
+	numbers := []int{10, 20, 30, 40, 50}
+	for i, v := range numbers {
+		println(i, v)
+	}
+	// Example of a for range loop over a map
+	m := map[string]int{"a": 1, "b": 2, "c": 3}
+	for k, v := range m {
+		println(k, v)
+	}
+	// Example of a for range loop over a string
+	str := "hello"
+	println(str)
+	for i, v := range str {
+		    fmt.Printf("Index: %d, Value: %c\n", i, v)
+	}
+}

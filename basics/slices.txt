@@ -1,0 +1,30 @@
+package main
+import "fmt"
+
+func main() {
+	// Creating a slice, does not require size declaration
+	numbers := []int{10, 20, 30, 40, 50}
+	fmt.Println("Original slice:", numbers)
+
+	// Accessing elements
+	fmt.Println("First element:", numbers[0])
+	fmt.Println("Second element:", numbers[1])
+
+	// Modifying elements
+	numbers[2] = 35
+	fmt.Println("Modified slice:", numbers)
+
+	// Slicing
+	subSlice := numbers[1:4]
+	fmt.Println("Sub-slice:", subSlice)
+
+	newSlice := make([]int, 3)
+	newSlice[0] = 100
+	newSlice[1] = 200
+	newSlice[2] = 300
+	fmt.Println("New slice:", newSlice)
+
+	a := [5]int{1, 2, 3, 4, 5}
+	sliceFromArray := a[1:4] // does not include element at index 4
+	fmt.Println("Slice from array:", sliceFromArray)
+}
