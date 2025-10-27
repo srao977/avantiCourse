@@ -1,0 +1,40 @@
+package main
+import "fmt"
+
+func main() {
+	// Creating and initializing maps
+	scores := make(map[string]int)
+	scores["Alice"] = 95
+	scores["Bob"] = 87
+
+	// Map literal
+	ages := map[string]int{
+		"John": 30,
+		"Jane": 25,
+	}
+
+	// Accessing values
+	fmt.Println("Alice's score:", scores["Alice"])
+	fmt.Println("John's age:", ages["John"])
+
+	// Check if key exists
+	score, exists := scores["Charlie"]
+	if exists {
+		fmt.Println("Charlie's score:", score)
+	} else {
+		fmt.Println("Charlie not found")
+	}
+
+	// Iterating over map
+	fmt.Println("All scores:")
+	for name, score := range scores {
+		fmt.Printf("%s: %d\n", name, score)
+	}
+
+	// Deleting a key
+	delete(scores, "Bob")
+	fmt.Println("Scores after deleting Bob:", scores)
+
+	// Map length
+	fmt.Println("Number of people:", len(ages))
+}												
